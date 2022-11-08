@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
 import Countdown from './Countdown';
-import OurCakeHeader from './OurCakeHeader';
 import SliderHome from './SliderHome';
 
 const Home = () => {
@@ -12,7 +11,6 @@ const Home = () => {
       <SliderHome></SliderHome>
       <Banner></Banner>
       <Countdown></Countdown>
-      <OurCakeHeader></OurCakeHeader>
 
 
 
