@@ -34,7 +34,7 @@ const SignUp = () => {
 
         <div className="mt-6">
             <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-                Sign Up
+                Login
             </button>
         </div>
     </form>
