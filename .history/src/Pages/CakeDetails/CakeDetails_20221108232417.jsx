@@ -7,7 +7,6 @@ const CakeDetails = () => {
     return (
         <div>
             <h1>det</h1>
-            <h1>{name}</h1>
         </div>
     );
 };

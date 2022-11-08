@@ -1,7 +1,6 @@
 import React from 'react';
-
-import { PhotoProvider, PhotoView } from 'react-photo-view';
-
+import { PhotoView } from 'react-photo-view';
+// import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 
 const CakeItem = ({cakeitem}) => {
@@ -11,20 +10,15 @@ const CakeItem = ({cakeitem}) => {
         <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
 
-      
+        <PhotoView src={img}>
+  <img src={img} style={{ objectFit: 'cover' }} alt="" />
+</PhotoView>
 
-                        <PhotoProvider>
-                        <PhotoView src={img}>
-                        <img src={img} class="lg:h-48 md:h-36 w-full object-cover object-center" style={{ objectFit: 'cover' }} alt="" />
-                        </PhotoView>
+            
 
-                        </PhotoProvider>
-
-                                    
-
-         
-           
           {/* <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={img} alt="blog"/> */}
+           
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={img} alt="blog"/>
           <div class="p-6">
 
             {/* <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
