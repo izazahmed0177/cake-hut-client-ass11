@@ -80,7 +80,7 @@ const CakeDetails = () => {
 
 
 
-                       <div>
+<div>
                         <section className="bg-gray-100">
                         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                             <div className="grid  gap-x-16 gap-y-8 lg:">
@@ -162,7 +162,7 @@ const CakeDetails = () => {
                         </div>
                         </section>
 
-                      </div>
+            </div>
 
                        
 

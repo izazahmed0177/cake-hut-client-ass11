@@ -78,9 +78,38 @@ const CakeDetails = () => {
                     user?.uid ?
                     <>
 
+<div className='container flex flex-col w-full max-w-lg p-6 mx-auto'>
+                <h3>Please  <Link to='/login' className="font-medium text-teal-300 dark:text-gray-200 hover:underline">Login</Link> to add a review</h3>
+            </div>
 
 
-                       <div>
+                    
+                    </>
+                    :
+                    <>
+                     <Link to='/login'>Login</Link>
+                    </>
+                }
+
+
+
+
+            {/*  */}
+
+
+
+
+
+
+
+
+
+            
+
+
+{/*  */}
+
+            <div>
                         <section className="bg-gray-100">
                         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                             <div className="grid  gap-x-16 gap-y-8 lg:">
@@ -162,50 +191,7 @@ const CakeDetails = () => {
                         </div>
                         </section>
 
-                      </div>
-
-                       
-
-
-                    
-                    </>
-                    :
-                    <>
-
-
-
-
-                        <div className='container flex flex-col w-full max-w-lg p-6 mx-auto'>
-                            <h3>Please  <Link to='/login' className="font-medium text-teal-300 dark:text-gray-200 hover:underline">Login</Link> to add a review</h3>
-                        </div>
-                     
-
-
-
-
-
-                    </>
-                }
-
-
-
-
-            {/*  */}
-
-
-
-
-
-
-
-
-
-            
-
-
-{/*  */}
-
-            
+            </div>
 
 
 
