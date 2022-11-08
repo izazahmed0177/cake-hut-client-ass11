@@ -23,16 +23,12 @@ const Header = () => {
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      {/* <a className="mr-5 hover:text-gray-900">First Link</a>
+      <a className="mr-5 hover:text-gray-900">First Link</a>
       <a className="mr-5 hover:text-gray-900">Second Link</a>
       <a className="mr-5 hover:text-gray-900">Third Link</a>
-      <a className="mr-5 hover:text-gray-900">Fourth Link</a> */}
-      {menuItems}
+      <a className="mr-5 hover:text-gray-900">Fourth Link</a>
     </nav>
     <div className="inline-flex items-center  border-0 py-1 px-3 focus:outline-none   text-base mt-4 md:mt-0">
-        <div className='m-6'>
-            <button  className="btn btn-outline btn-secondary">Login</button>
-        </div>
       <div className=" overflow-hidden border-2 border-gray-400 rounded-full">
       <FaUser title='Please Log in'></FaUser>
       </div>

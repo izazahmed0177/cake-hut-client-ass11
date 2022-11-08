@@ -30,9 +30,6 @@ const Header = () => {
       {menuItems}
     </nav>
     <div className="inline-flex items-center  border-0 py-1 px-3 focus:outline-none   text-base mt-4 md:mt-0">
-        <div className='m-6'>
-            <button  className="btn btn-outline btn-secondary">Login</button>
-        </div>
       <div className=" overflow-hidden border-2 border-gray-400 rounded-full">
       <FaUser title='Please Log in'></FaUser>
       </div>
