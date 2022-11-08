@@ -44,7 +44,7 @@ const Header = () => {
                 {
                     user?.uid ?
                     <>
-                    <button onClick={handleLogOut}>Log Out</button>
+                    <button>Log Out</button>
                     </>
                     :
                     <>

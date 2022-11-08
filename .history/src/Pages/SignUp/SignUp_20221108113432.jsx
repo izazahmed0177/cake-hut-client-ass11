@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const { createUser, updateUserProfile}=useContext(AuthContext)
+    const {}=useContext(AuthContext)
 
     const handaleSignUp=event=>{
         event.preventDefault();
@@ -12,29 +12,14 @@ const SignUp = () => {
         const password=form.password.value;
 
         console.log(email,password)
-        createUser(email,password)
-        .then(result=>{
-            const user=result.user;
-            console.log(user);
-            // setAuthToken(user)
-        })
-        .catch(err=>console.error(err))
+        // createUser(email,password)
+        // .then(result=>{
+        //     const user=result.user;
+        //     console.log(user);
+        //     // setAuthToken(user)
+        // })
+        // .catch(err=>console.error(err))
     }
-
-
-
-    const handleUpdateUserProfil=(name,photoURL)=>{
-        const profile={
-            displayName:name,
-            photoURL:photoURL
-
-
-        }
-        updateUserProfile(profile)
-        .then(()=>{})
-        .catch(err=>console.error(err))
-    }
-
 
 
 
@@ -54,12 +39,12 @@ const SignUp = () => {
             <input name='name'placeholder='User Name' type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
         </div>
         <div>
-            <label  className="block text-sm text-gray-800 dark:text-gray-200">Photo URL</label>
+            <label  className="block text-sm text-gray-800 dark:text-gray-200">Photo Url</label>
             <input name='photoURL' placeholder='Photo URL' type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
         </div>
         <div>
             <label className="block text-sm text-gray-800 dark:text-gray-200">User Email</label>
-            <input name='email' placeholder='User Email' required type="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input name='email' placeholder='User Email' required type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
         </div>
 
         <div className="mt-4">

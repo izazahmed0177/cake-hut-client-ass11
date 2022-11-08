@@ -23,21 +23,6 @@ const SignUp = () => {
 
 
 
-    const handleUpdateUserProfil=(name,photoURL)=>{
-        const profile={
-            displayName:name,
-            photoURL:photoURL
-
-
-        }
-        updateUserProfile(profile)
-        .then(()=>{})
-        .catch(err=>console.error(err))
-    }
-
-
-
-
 
 
 

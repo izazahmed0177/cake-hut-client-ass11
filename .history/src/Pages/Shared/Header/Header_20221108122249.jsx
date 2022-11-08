@@ -6,12 +6,6 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 const Header = () => {
     const {user,logOut}=useContext(AuthContext)
 
-    const handleLogOut=()=>{
-        logOut()
-        .then(()=>{})
-        .catch(err=>console.error(err))
-    }
-
     const menuItems=<>
     <NavLink className="mr-5 hover:text-gray-900">Home</NavLink>
       <NavLink className="mr-5 hover:text-gray-900">Second Link</NavLink>
@@ -44,7 +38,7 @@ const Header = () => {
                 {
                     user?.uid ?
                     <>
-                    <button onClick={handleLogOut}>Log Out</button>
+                    <button>Log Out</button>
                     </>
                     :
                     <>

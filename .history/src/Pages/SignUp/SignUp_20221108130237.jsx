@@ -30,9 +30,6 @@ const SignUp = () => {
 
 
         }
-        updateUserProfile(profile)
-        .then(()=>{})
-        .catch(err=>console.error(err))
     }
 
 

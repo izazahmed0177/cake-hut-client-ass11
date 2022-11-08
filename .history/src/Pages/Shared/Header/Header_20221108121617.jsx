@@ -6,12 +6,6 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 const Header = () => {
     const {user,logOut}=useContext(AuthContext)
 
-    const handleLogOut=()=>{
-        logOut()
-        .then(()=>{})
-        .catch(err=>console.error(err))
-    }
-
     const menuItems=<>
     <NavLink className="mr-5 hover:text-gray-900">Home</NavLink>
       <NavLink className="mr-5 hover:text-gray-900">Second Link</NavLink>
@@ -38,13 +32,13 @@ const Header = () => {
       <a className="mr-5 hover:text-gray-900">Fourth Link</a> */}
       {menuItems}
     </nav>
-    <div className="inline-flex items-center  border-0 py-1 px-3 focus:outline-none   text-base mt-4 md:mt-0">
+    <div className="md:inline-flex items-center  border-0 py-1 px-3 focus:outline-none   text-base mt-4 md:mt-0">
         <div className='m-6'>
             <button  className="btn btn-outline btn-secondary">
                 {
                     user?.uid ?
                     <>
-                    <button onClick={handleLogOut}>Log Out</button>
+                    <button>Log Out</button>
                     </>
                     :
                     <>
@@ -54,15 +48,12 @@ const Header = () => {
                
             </button>
         </div>
-      <div className=" overflow-hidden border-2 border-gray-400 rounded-full w-9 flex items-center">
+      <div className=" overflow-hidden border-2 border-gray-400 rounded-full w-9">
         {
             user?.photoURL ?
             <img className='w-8 h-8'title={user?.displayName} src={user?.photoURL}></img>
             :
-            <div className='flex items-center'>
-                
-                <FaUser className='w-8 h-8' title='Please Log in'></FaUser>
-            </div>
+      <FaUser className='w-8 h-8' title='Please Log in'></FaUser>
         }
       </div>
     </div>
