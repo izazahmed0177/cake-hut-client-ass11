@@ -13,14 +13,14 @@ const Header = () => {
     }
 
     const menuItems=<>
-    <NavLink to='/' className="mr-5 hover:text-gray-900">Home</NavLink>
-      <NavLink to='/ourcake' className="mr-5 hover:text-gray-900">Our Cake</NavLink>
+    <NavLink className="mr-5 hover:text-gray-900">Home</NavLink>
+      <NavLink className="mr-5 hover:text-gray-900">Our Cake</NavLink>
 
       {
          user?.uid ?
          <>
-           <NavLink to='/myreview' className="mr-5 hover:text-gray-900">My Review</NavLink>
-           <NavLink to='/addcake' className="mr-5 hover:text-gray-900">Add Cake</NavLink>
+           <NavLink className="mr-5 hover:text-gray-900">My Review</NavLink>
+           <NavLink className="mr-5 hover:text-gray-900">Add Cake</NavLink>
          </>
          :
          <>
@@ -33,7 +33,7 @@ const Header = () => {
 
 
       {/* <NavLink className="mr-5 hover:text-gray-900">Third Link</NavLink> */}
-      <NavLink to='/blog' className="mr-5 hover:text-gray-900">Blog</NavLink>
+      <NavLink className="mr-5 hover:text-gray-900">Blog</NavLink>
     
     
     </>
