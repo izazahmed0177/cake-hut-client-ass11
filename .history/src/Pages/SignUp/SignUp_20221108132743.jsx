@@ -47,10 +47,10 @@ const SignUp = () => {
 
 
     return (
-        <div className='m-12 '>
+        <div className='m-12 bg-red-300'>
 
 
-<div className="w-full max-w-sm p-6 m-auto mx-auto bg-red-300 rounded-md shadow-md dark:bg-gray-800">
+<div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
     <h1 className="text-3xl font-semibold text-center text-gray-700 dark:text-white">Sing Up</h1>
 
     <form onSubmit={handaleSignUp} className="mt-6">

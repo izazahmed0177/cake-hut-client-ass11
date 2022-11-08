@@ -3,8 +3,6 @@ import ErrorPage from "../../Other/ErrorPage/ErrorPage";
 import AddCake from "../../Pages/AddCake/AddCake";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
-import MyReview from "../../Pages/MyReview/MyReview";
-import OurCake from "../../Pages/OurCake/OurCake";
 import SignUp from "../../Pages/SignUp/SignUp";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -35,12 +33,12 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/ourcake',
-                element: <OurCake></OurCake>
+                element: <Blog></Blog>
 
             },
             {
                 path: '/myreview',
-                element: <MyReview></MyReview>
+                element: <Blog></Blog>
 
             },
             {
