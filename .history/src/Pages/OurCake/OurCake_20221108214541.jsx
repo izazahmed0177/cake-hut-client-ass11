@@ -17,7 +17,7 @@ const OurCake = () => {
 
       
 {
-    allCake.map(cakeitem => <CakeItem key={cakeitem._id} cakeitem={cakeitem}></CakeItem>)
+    allCake.map(cakeitem=> <CakeItem key={cakeitem._id} cakeitem={cakeitem}></CakeItem>)
 }
 
 

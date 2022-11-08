@@ -6,7 +6,7 @@ const OurCake = () => {
     const allCake=useLoaderData();
     return (
         <div>
-            {/* <h1>cake list {allCake.length}</h1> */}
+            <h1>cake list {allCake.length}</h1>
 
 
 
@@ -17,7 +17,7 @@ const OurCake = () => {
 
       
 {
-    allCake.map(cakeitem => <CakeItem key={cakeitem._id} cakeitem={cakeitem}></CakeItem>)
+    allCake.map(cakeitem=> <CakeItem key={cakeitem._id} cakeitem={cakeitem}></CakeItem>)
 }
 
 
