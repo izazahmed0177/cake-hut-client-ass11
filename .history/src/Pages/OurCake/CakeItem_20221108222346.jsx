@@ -14,7 +14,7 @@ const CakeItem = ({cakeitem}) => {
 
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{name}</h1>
             {/* <p class="leading-relaxed mb-3">{details}</p> */}
-            <p class="leading-relaxed mb-3">{details.length > 100 ? details.slice(0,100) + '...' : details}</p>
+            <p class="leading-relaxed mb-3">{details.length > 310 ? details.slice(0,100) + '...' : details}</p>
 
 
             <h4 class="title-font text-1xl font-medium text-gray-900 mb-3">Price: ${price}</h4>
@@ -25,7 +25,7 @@ const CakeItem = ({cakeitem}) => {
 
           </div>
           <div class="btn btn-ghost text-center flex">
-              <Link to={`/cakeservices/${_id}`} class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">More Details
+              <Link class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">More Details
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
                   <path d="M12 5l7 7-7 7"></path>
