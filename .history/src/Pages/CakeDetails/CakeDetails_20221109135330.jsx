@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
@@ -7,19 +7,6 @@ const CakeDetails = () => {
     const {user}=useContext(AuthContext)
     const cakaDetails=useLoaderData();
     const {_id,name,img,price,rating,details}=cakaDetails;
-
-    ////////////
-
-    const [reviews,setReviews]=useState([]);
-
-    useEffect(()=>{
-        fetch('http://localhost:5000/allreviews')
-        .then(res=>res.json())
-        .then(data=>setReviews(data))
-    },[]);
-
-
-    // /////////////
 
     const handlePlaceCakeReview=event=>{
         event.preventDefault();
