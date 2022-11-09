@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import OurCakeHeaderElement from './OurCakeHeaderElement';
 
 const OurCakeHeader = () => {
 
@@ -23,9 +22,7 @@ const OurCakeHeader = () => {
 
 
      
-{
-  cakeServices.map(cakeService=><OurCakeHeaderElement key={cakeService._id} cakeService={cakeService}></OurCakeHeaderElement>)
-}
+
 
       
 
