@@ -19,8 +19,6 @@ const ReviewItem = ({review}) => {
             .then(data=>{
                 if (data.deletedCount>0) {
                     alert('deleted complite')
-                    const newReview=allReview.filter(review=>review._id !==id)
-                    setAllReview(newReview);
                 }
             })
             

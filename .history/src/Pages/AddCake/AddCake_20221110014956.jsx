@@ -23,9 +23,6 @@ const AddCake = () => {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-
-
-            
             <form action="#" method="POST">
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
@@ -148,15 +145,18 @@ const AddCake = () => {
                 </div>
               </div>
             </form>
-
-
-
           </div>
         </div>
       </div>
 
 
 
+
+      <div className="hidden sm:block" aria-hidden="true">
+        <div className="py-5">
+          <div className="border-t border-gray-200" />
+        </div>
+      </div>
 
 
 

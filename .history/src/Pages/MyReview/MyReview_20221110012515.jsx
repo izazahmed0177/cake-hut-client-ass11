@@ -18,7 +18,7 @@ const MyReview = () => {
         fetch(`http://localhost:5000/customer/${customerId}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
-    },[reviews]);
+    },[]);
 
     console.log(reviews)
 

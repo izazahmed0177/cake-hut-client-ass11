@@ -5,20 +5,17 @@ import ReviewItem from './ReviewItem';
 
 const MyReview = () => {
     const {user}=useContext(AuthContext);
-    // const [allReview,setAllReview]=useState();
+    const [allReview,setAllReview]=useState();
 
     const  customerId=user?.uid || 'unregistered'
 
     const [reviews,setReviews]=useState([]);
-
-
-
     useEffect(()=>{
         // fetch('http://localhost:5000/allreviews')
         fetch(`http://localhost:5000/customer/${customerId}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
-    },[reviews]);
+    },[]);
 
     console.log(reviews)
 
@@ -35,8 +32,8 @@ const MyReview = () => {
             .then(data=>{
                 if (data.deletedCount>0) {
                     alert('deleted complite')
-                    const newReview=reviews.filter(review=>review._id !==id)
-                    setReviews(newReview);
+                    // const newReview=allReview.filter(review=>review._id !==id)
+                    // setAllReview(newReview);
                 }
             })
             

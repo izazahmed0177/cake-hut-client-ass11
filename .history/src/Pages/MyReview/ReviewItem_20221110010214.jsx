@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ReviewItem = ({review}) => {
 
     const {_id,customerImg,customerRating,customerName,message,cakeName }=review
-    const [allReview,setAllReview]=useState(review);
 
 
 
@@ -19,8 +18,6 @@ const ReviewItem = ({review}) => {
             .then(data=>{
                 if (data.deletedCount>0) {
                     alert('deleted complite')
-                    const newReview=allReview.filter(review=>review._id !==id)
-                    setAllReview(newReview);
                 }
             })
             
