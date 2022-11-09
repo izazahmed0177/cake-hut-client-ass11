@@ -7,15 +7,14 @@ const CakeDetails = () => {
 
     const {user}=useContext(AuthContext)
     const cakaDetails=useLoaderData();
-    const {_id,name,img,price,rating,details,cakeService}=cakaDetails;
+    const {_id,name,img,price,rating,details}=cakaDetails;
 
     ////////////
 
     const [reviews,setReviews]=useState([]);
 
     useEffect(()=>{
-        // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/allreviewscake/${_id}`)
+        fetch('http://localhost:5000/allreviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);

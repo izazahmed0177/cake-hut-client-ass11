@@ -15,7 +15,7 @@ const CakeDetails = () => {
 
     useEffect(()=>{
         // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/allreviewscake/${_id}`)
+        fetch(`http://localhost:5000/allreviewscake/${cakeService}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);
