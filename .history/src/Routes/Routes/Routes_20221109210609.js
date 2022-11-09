@@ -7,7 +7,6 @@ import Login from "../../Pages/Login/Login";
 import MyReview from "../../Pages/MyReview/MyReview";
 import OurCake from "../../Pages/OurCake/OurCake";
 import SignUp from "../../Pages/SignUp/SignUp";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../layout/Main");
@@ -44,7 +43,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/myreview',
-                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+                element: <MyReview></MyReview>
 
             },
             {

@@ -21,19 +21,19 @@ const MyReview = () => {
 
     return (
         <div>
-            {/* <h1>review  {reviews.length}</h1> */}
+            <h1>review  {reviews.length}</h1>
 
 
 
             {
                 reviews.length==0 ?
                 <>
-              
+                <h1>000000000</h1>
                 <NoReview></NoReview>
                 </>
                 :
                 <>
-               
+                <h1>sone ttttt</h1>
                 {
                 reviews.map(review=><ReviewItem key={review._id} review={review}></ReviewItem>)
                 }

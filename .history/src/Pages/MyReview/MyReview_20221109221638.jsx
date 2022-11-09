@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import NoReview from './NoReview';
 import ReviewItem from './ReviewItem';
 
 const MyReview = () => {
@@ -21,26 +20,24 @@ const MyReview = () => {
 
     return (
         <div>
-            {/* <h1>review  {reviews.length}</h1> */}
+            <h1>review  {reviews.length}</h1>
 
 
 
             {
                 reviews.length==0 ?
                 <>
-              
-                <NoReview></NoReview>
+                <h1>000000000</h1>
                 </>
                 :
                 <>
-               
-                {
-                reviews.map(review=><ReviewItem key={review._id} review={review}></ReviewItem>)
-                }
+                <h1>sone ttttt</h1>
                 </>
                
             }
-            
+            {
+                reviews.map(review=><ReviewItem key={review._id} review={review}></ReviewItem>)
+            }
           
 
 
