@@ -104,10 +104,6 @@ const CakeDetails = () => {
 
             </div>
 
-            <div className='text-center title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900'>
-                <h1>All Review</h1>
-            </div>
-
 
 
             <div className='m-3'>
@@ -170,7 +166,6 @@ const CakeDetails = () => {
                                         
                                         type="text"
                                         name='rating'
-                                        required
                                     />
                                     </div>
 
@@ -186,7 +181,6 @@ const CakeDetails = () => {
                                     placeholder="Message"
                                     rows="8"
                                     name='message'
-                                    required
                                     ></textarea>
                                 </div>
 

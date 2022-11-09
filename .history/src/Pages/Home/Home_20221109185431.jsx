@@ -14,10 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <Countdown></Countdown>
       <OurCakeHeader></OurCakeHeader>
-      <div className='text-center mb-3'>
-
-      <Link to='/ourcake' className="btn btn-outline btn-info">See All</Link>
-      </div>
+      <Link to='/ourcake'>See All</Link>
 
 
 

@@ -25,67 +25,28 @@ const SliderHome = () => {
 	</button>
 	<div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
 		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
+		<PhotoProvider>
+                        <PhotoView >
+                        {/* <img src={img} class="lg:h-48 md:h-36 w-full object-cover object-center"       style={{ objectFit: 'cover' }} alt="" /> */}
 
-		              <PhotoProvider>
-                        <PhotoView src={img1}>
-                       
+
 						<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" style={{ objectFit: 'cover' }} src={img1}alt="Image 1" />
                         </PhotoView>
 
                         </PhotoProvider>
-
-
-			{/* <img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img1}alt="Image 1" /> */}
+			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img1}alt="Image 1" />
 		</div>
 		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			{/* <img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img2} alt="Image 2" /> */}
-
-			<PhotoProvider>
-                        <PhotoView src={img2}>
-                       
-						<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" style={{ objectFit: 'cover' }} src={img2}alt="Image 1" />
-                        </PhotoView>
-
-                        </PhotoProvider>
-
-			
-			
+			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img2} alt="Image 2" />
 		</div>
 		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			{/* <img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img3} alt="Image 3" /> */}
-
-			<PhotoProvider>
-                        <PhotoView src={img3}>
-                       
-						<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" style={{ objectFit: 'cover' }} src={img3}alt="Image 1" />
-                        </PhotoView>
-
-                        </PhotoProvider>
-
-
-
+			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img3} alt="Image 3" />
 		</div>
 		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			{/* <img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img4} alt="Image 4" /> */}
-
-			<PhotoProvider>
-                        <PhotoView src={img4}>
-                       
-						<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" style={{ objectFit: 'cover' }} src={img4}alt="Image 1" />
-                        </PhotoView>
-
-                        </PhotoProvider>
+			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img4} alt="Image 4" />
 		</div>
 		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			{/* <img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img5} alt="Image 5" /> */}
-
-			<PhotoProvider>
-                        <PhotoView src={img5}>
-                       
-						<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" style={{ objectFit: 'cover' }} src={img5}alt="Image 1" />
-                        </PhotoView>
-
-                        </PhotoProvider>
+			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src={img5} alt="Image 5" />
 		</div>
 	</div>
 	<button aria-label="Slide forward" id="next" className="absolute right-0 z-30 p-2 mr-10 focus:outline-none focus:dark:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">

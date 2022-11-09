@@ -170,7 +170,6 @@ const CakeDetails = () => {
                                         
                                         type="text"
                                         name='rating'
-                                        required
                                     />
                                     </div>
 
@@ -186,7 +185,6 @@ const CakeDetails = () => {
                                     placeholder="Message"
                                     rows="8"
                                     name='message'
-                                    required
                                     ></textarea>
                                 </div>
 
