@@ -11,12 +11,10 @@ const CakeDetails = () => {
     const handlePlaceCakeReview=event=>{
         event.preventDefault();
         const form=event.target;
-        const customerEmail=user?.email || 'unregistered'
+        const email=user?.email || 'unregistered'
         const customerRating=form.rating.value;
         const message=form.message.value;
-        const  customerName=user?.displayName || 'unregistered'
-        const  customerId=user?.uid || 'unregistered'
-        const  customerImg=user?.photoURL || 'unregistered'
+        // const  customerName=user?.
 
         const review={
             cakeService:_id,

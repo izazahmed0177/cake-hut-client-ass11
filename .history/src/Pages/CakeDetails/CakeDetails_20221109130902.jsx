@@ -7,34 +7,6 @@ const CakeDetails = () => {
     const {user}=useContext(AuthContext)
     const cakaDetails=useLoaderData();
     const {_id,name,img,price,rating,details}=cakaDetails;
-
-    const handlePlaceCakeReview=event=>{
-        event.preventDefault();
-        const form=event.target;
-        const customerEmail=user?.email || 'unregistered'
-        const customerRating=form.rating.value;
-        const message=form.message.value;
-        const  customerName=user?.displayName || 'unregistered'
-        const  customerId=user?.uid || 'unregistered'
-        const  customerImg=user?.photoURL || 'unregistered'
-
-        const review={
-            cakeService:_id,
-            cakeName:name,
-            cakePrice:price,
-            cakeRating:rating,
-            cakeImg:img,
-
-        }
-
-    }
-
-
-
-
-
-
-
     return (
         <div>
             {/* <h1>det</h1>
