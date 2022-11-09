@@ -9,25 +9,10 @@ const ReviewItem = ({review}) => {
 
 
     const handleDelete=id=>{
-        const proceed=window.confirm('Are you sure,delete this');
-        if (proceed) {
-            fetch(``,{
-                method:'DELETE',
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if (data.deletedCount>0) {
-                    alert('deleted complite')
-                }
-            })
-            
-            
-
-        }
 
     }
 
-
+    
     return (
         <div>
               <div className='m-3'>

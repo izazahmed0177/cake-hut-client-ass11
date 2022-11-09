@@ -1,33 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ReviewItem = ({review}) => {
 
     const {_id,customerImg,customerRating,customerName,message,cakeName }=review
-
-
-
-
-    const handleDelete=id=>{
-        const proceed=window.confirm('Are you sure,delete this');
-        if (proceed) {
-            fetch(``,{
-                method:'DELETE',
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if (data.deletedCount>0) {
-                    alert('deleted complite')
-                }
-            })
-            
-            
-
-        }
-
-    }
-
-
     return (
         <div>
               <div className='m-3'>
@@ -44,16 +19,14 @@ const ReviewItem = ({review}) => {
                             <h4 className="text-lg font-semibold text-center md:text-left">Name: {customerName}</h4>
                             <h4 className="text-lg font-semibold text-center md:text-left">Cake Name: {cakeName}</h4>
                             <h4 className="text-lg font-semibold text-center md:text-left">My Rating: {customerRating}</h4>
-                            {/* <h4 className="text-lg font-semibold text-center md:text-left">My Rating: {_id}</h4> */}
+                            <h4 className="text-lg font-semibold text-center md:text-left">My Rating: {_id}</h4>
                             <p className="text-gray-400">Review: {message}</p>
                             </div>
                             </div>
                             <div className="flex justify-center pt-4 space-x-4 align-center">
 
-                            <Link to={`/editreview/${_id}`} className="btn btn-primary">Edit Review</Link>
-
-
-                            <button onClick={()=>handleDelete(_id)} className="btn btn-secondary">Delete Review</button>
+                            <button className="btn btn-primary">Edit Review</button>
+                            <button className="btn btn-secondary">Delete Review</button>
 
 
 

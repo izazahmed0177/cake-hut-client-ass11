@@ -4,30 +4,6 @@ import { Link } from 'react-router-dom';
 const ReviewItem = ({review}) => {
 
     const {_id,customerImg,customerRating,customerName,message,cakeName }=review
-
-
-
-
-    const handleDelete=id=>{
-        const proceed=window.confirm('Are you sure,delete this');
-        if (proceed) {
-            fetch(``,{
-                method:'DELETE',
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if (data.deletedCount>0) {
-                    alert('deleted complite')
-                }
-            })
-            
-            
-
-        }
-
-    }
-
-
     return (
         <div>
               <div className='m-3'>
@@ -51,9 +27,7 @@ const ReviewItem = ({review}) => {
                             <div className="flex justify-center pt-4 space-x-4 align-center">
 
                             <Link to={`/editreview/${_id}`} className="btn btn-primary">Edit Review</Link>
-
-
-                            <button onClick={()=>handleDelete(_id)} className="btn btn-secondary">Delete Review</button>
+                            <button className="btn btn-secondary">Delete Review</button>
 
 
 
