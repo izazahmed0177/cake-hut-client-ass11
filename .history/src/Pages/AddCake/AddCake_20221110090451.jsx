@@ -1,69 +1,32 @@
 import React from 'react';
 
 const AddCake = () => {
-
-
-
-
-  const handlePlaceCakeAdd=event=>{
-    event.preventDefault();
-    const form=event.target;
-  
-    const name=form.name.value;
-    const img=form.img.value;
-    const price=form.price.value;
-    const rating=form.rating.value;
-    const details=form.details.value;
-   
-
-    const cakeAdd={
-        name,
-        img,
-        price,
-        rating,
-        details
-
-    }
-
-    fetch('',{
-        method:'POST',
-        headers:{
-            'content-type':'application/json'
-        },
-        body:JSON.stringify(cakeAdd)
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        console.log(data)
-        if (data.acknowledged) {
-            alert('Cake Add successfully')
-            form.reset();
-        }
-    })
-
-    .catch(err=>console.error(err));
-
-
-
-
-}
-
-
-
-
-
-
-
-
     return (
         <div>
             {/* <h1>add cake</h1> */}
 
+
+           
+
+
+
+    
+
+
+
       <div className="mt-10 sm:mt-0 m-6">
 
         <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="mt-5 md:col-span-3  "> 
-            <form onSubmit={handlePlaceCakeAdd}>
+
+
+          
+
+
+          <div className="mt-5 md:col-span-3  ">
+
+
+            
+            <form action="#" method="POST">
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-slate-300 px-4 py-5 sm:p-6">
 
@@ -76,14 +39,18 @@ const AddCake = () => {
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        placeholder='Cake Name'
-                        required
-                       
-                       
+                        name="first-name"
+                        id="first-name"
+                        autoComplete="given-name"
                         className="mt-1  w-full rounded-md border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
+
+
+
+                    
+
+
 
                     <div className="col-span-6 sm:col-span-3">
                       <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
@@ -91,59 +58,67 @@ const AddCake = () => {
                       </label>
                       <input
                         type="text"
-                        name="price"
-                        placeholder='Cake Price'
-                        required
-                       
-                       
+                        name="email-address"
+                        id="email-address"
+                        autoComplete="email"
                         className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
+
+
                     <div className="col-span-6 sm:col-span-6">
                       <label htmlFor="country" className="block text-sm font-medium text-gray-700">
-                        Cake Image URL
+                        Country
                       </label>
                       <input
-                        
-                        name="img"
-                        placeholder='Cake Image URL'
-                        required
+                        id="country"
+                        name="country"
                       
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
                         
+
                       </input>
                     </div>
 
-                    <div className="col-span-6 lg:col-span-3 md:col-span-3">
+
+
+                    <div className="col-span-6">
                       <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
-                        Cake Rating
+                        Street address
                       </label>
                       <input
                         type="text"
-                        name="rating"
-                        placeholder='Cake Rating'
-                        required
+                        name="street-address"
+                        id="street-address"
+                        autoComplete="street-address"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
-                    <div className="col-span-6 sm:col-span-6 lg:col-span-6">
+
+
+                    <div className="col-span-6 sm:col-span-6 lg:col-span-2">
                       <label htmlFor="city" className="block text-sm font-medium text-gray-700">
-                        Cake Details
+                        City
                       </label>
-                      <textarea
+                      <input
                         type="text"
-                        name="details"
-                        placeholder='Cake Details'
-                        required
-                        
-                        rows="8"
-                       
+                        name="city"
+                        id="city"
+                        autoComplete="address-level2"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
+
+
+
+                  
+
+
+
+
 
                   </div>
                 </div>
@@ -154,7 +129,7 @@ const AddCake = () => {
                     type="submit"
                     className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
-                    Save Cake
+                    Save
                   </button>
                 </div>
 

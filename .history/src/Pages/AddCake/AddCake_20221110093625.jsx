@@ -59,10 +59,27 @@ const AddCake = () => {
         <div>
             {/* <h1>add cake</h1> */}
 
+
+           
+
+
+
+    
+
+
+
       <div className="mt-10 sm:mt-0 m-6">
 
         <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="mt-5 md:col-span-3  "> 
+
+
+          
+
+
+          <div className="mt-5 md:col-span-3  ">
+
+
+            
             <form onSubmit={handlePlaceCakeAdd}>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-slate-300 px-4 py-5 sm:p-6">
@@ -85,6 +102,12 @@ const AddCake = () => {
                       />
                     </div>
 
+
+
+                    
+
+
+
                     <div className="col-span-6 sm:col-span-3">
                       <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
                         Cake Price
@@ -100,6 +123,8 @@ const AddCake = () => {
                       />
                     </div>
 
+
+
                     <div className="col-span-6 sm:col-span-6">
                       <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                         Cake Image URL
@@ -113,8 +138,11 @@ const AddCake = () => {
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
                         
+
                       </input>
                     </div>
+
+
 
                     <div className="col-span-6 lg:col-span-3 md:col-span-3">
                       <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
@@ -125,9 +153,13 @@ const AddCake = () => {
                         name="rating"
                         placeholder='Cake Rating'
                         required
+                        
+                     
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
+
+
 
                     <div className="col-span-6 sm:col-span-6 lg:col-span-6">
                       <label htmlFor="city" className="block text-sm font-medium text-gray-700">
@@ -144,6 +176,14 @@ const AddCake = () => {
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm py-2 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
+
+
+
+                  
+
+
+
+
 
                   </div>
                 </div>
