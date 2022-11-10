@@ -15,8 +15,7 @@ const CakeDetails = () => {
     console.log(location)
 
 
-    const {_id,name,img,price,rating,details,cakeService,
-        date}=cakaDetails;
+    const {_id,name,img,price,rating,details,cakeService}=cakaDetails;
 
     ////////////
 
@@ -43,7 +42,7 @@ const CakeDetails = () => {
         const  customerId=user?.uid || 'unregistered'
         const  customerImg=user?.photoURL || 'unregistered'
 
-        // var time = {date: new Date()};
+        var time = {date: new Date()};
 
         const review={
             cakeService:_id,
@@ -57,7 +56,7 @@ const CakeDetails = () => {
             customerName,
             customerId,
             customerImg,
-            date: new Date()
+            time
 
         }
 

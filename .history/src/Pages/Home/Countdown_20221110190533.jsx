@@ -25,7 +25,9 @@ const Countdown = () => {
   </div> 
   <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span className="countdown font-mono text-5xl">
-      <span style={{"--value":51}}></span>
+      <span style={{"--value":51}}>
+        {moment().format('MMMM Do YYYY, h:mm:ss a')}
+      </span>
     </span>
     sec
   </div>

@@ -11,7 +11,7 @@ const Footer = () => {
   <div className="hidden lg:relative lg:col-span-2 lg:block">
     <img
       alt="Art"
-      src={img1}
+      src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
       className="absolute inset-0 h-full w-full object-cover"
     />
   </div>
@@ -23,7 +23,7 @@ const Footer = () => {
           <span className="text-xs uppercase tracking-widest"> Call </span>
 
           <a className="block text-2xl hover:opacity-75 sm:text-3xl" href="">
-            01777657846
+            0123456789
           </a>
         </p>
 
@@ -162,10 +162,10 @@ const Footer = () => {
           <p className="font-medium">Products</p>
 
           <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-300">
-            <a className="hover:opacity-75" href=""> Cake Section </a>
-            <a className="hover:opacity-75" href=""> Review </a>
-            <a className="hover:opacity-75" href=""> Blog </a>
-            <a className="hover:opacity-75" href=""> Swite Sessions </a>
+            <a className="hover:opacity-75" href=""> 1to1 Coaching </a>
+            <a className="hover:opacity-75" href=""> Lesson Plans </a>
+            <a className="hover:opacity-75" href=""> Meal Plans </a>
+            <a className="hover:opacity-75" href=""> Gym Sessions </a>
           </nav>
         </div>
       </div>
@@ -181,11 +181,16 @@ const Footer = () => {
           <a className="hover:opacity-75" href=""> Returns Policy </a>
         </div>
 
-        <p className="mt-4 sm:mt-0">&copy; 2022 Cake Hut.</p>
+        <p className="mt-4 sm:mt-0">&copy; 2022 Company Name.</p>
       </div>
 
       <p className="mt-8 text-xs text-gray-500">
-        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        mollitia quia quod repellendus. Porro harum, odio dolore perspiciatis
+        praesentium provident esse consequatur quibusdam aperiam, cupiditate
+        omnis modi in quasi? In, maxime odio vel repellat sed earum? Debitis
+        quaerat facilis animi. Odio natus nostrum laboriosam impedit magnam
+        praesentium asperiores consectetur ipsum.
       </p>
     </div>
   </div>

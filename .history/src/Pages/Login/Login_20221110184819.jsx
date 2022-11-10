@@ -54,7 +54,7 @@ const Login = () => {
        
     }
 //----------------
-//google login
+
     const handaleGoogleSignIn=()=>{
         googleSignIn()
         .then(result=>{

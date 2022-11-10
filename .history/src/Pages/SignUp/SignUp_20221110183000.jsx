@@ -34,6 +34,10 @@ const SignUp = () => {
 
             form.reset();
 
+
+
+
+
             fetch('http://localhost:5000/jwt',{
                 method:'POST',
                 headers:{
@@ -49,7 +53,7 @@ const SignUp = () => {
                 localStorage.setItem('cake-Token',data.token);
                  navigate(from,{replace:true})
             })
-            // navigate(from,{replace:true});
+            navigate(from,{replace:true});
         })
         .catch(err=>console.error(err))
         .finally(()=>{

@@ -15,8 +15,7 @@ const CakeDetails = () => {
     console.log(location)
 
 
-    const {_id,name,img,price,rating,details,cakeService,
-        date}=cakaDetails;
+    const {_id,name,img,price,rating,details,cakeService}=cakaDetails;
 
     ////////////
 

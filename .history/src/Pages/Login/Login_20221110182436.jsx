@@ -5,13 +5,12 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 const Login = () => {
     const { singIn, googleSignIn,setLoading}=useContext(AuthContext);
 
-    //location 
     const location=useLocation();
     const navigate=useNavigate();
 
     const from=location.state?.from?.pathname || '/';
 
-//login handalar
+
     const handaleLogin=event=>{
         event.preventDefault();
         const form=event.target;
@@ -54,7 +53,7 @@ const Login = () => {
        
     }
 //----------------
-//google login
+
     const handaleGoogleSignIn=()=>{
         googleSignIn()
         .then(result=>{

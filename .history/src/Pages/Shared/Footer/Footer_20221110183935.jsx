@@ -162,10 +162,10 @@ const Footer = () => {
           <p className="font-medium">Products</p>
 
           <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-300">
-            <a className="hover:opacity-75" href=""> Cake Section </a>
-            <a className="hover:opacity-75" href=""> Review </a>
-            <a className="hover:opacity-75" href=""> Blog </a>
-            <a className="hover:opacity-75" href=""> Swite Sessions </a>
+            <a className="hover:opacity-75" href=""> 1to1 Coaching </a>
+            <a className="hover:opacity-75" href=""> Lesson Plans </a>
+            <a className="hover:opacity-75" href=""> Meal Plans </a>
+            <a className="hover:opacity-75" href=""> Gym Sessions </a>
           </nav>
         </div>
       </div>
@@ -181,11 +181,16 @@ const Footer = () => {
           <a className="hover:opacity-75" href=""> Returns Policy </a>
         </div>
 
-        <p className="mt-4 sm:mt-0">&copy; 2022 Cake Hut.</p>
+        <p className="mt-4 sm:mt-0">&copy; 2022 Company Name.</p>
       </div>
 
       <p className="mt-8 text-xs text-gray-500">
-        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        mollitia quia quod repellendus. Porro harum, odio dolore perspiciatis
+        praesentium provident esse consequatur quibusdam aperiam, cupiditate
+        omnis modi in quasi? In, maxime odio vel repellat sed earum? Debitis
+        quaerat facilis animi. Odio natus nostrum laboriosam impedit magnam
+        praesentium asperiores consectetur ipsum.
       </p>
     </div>
   </div>

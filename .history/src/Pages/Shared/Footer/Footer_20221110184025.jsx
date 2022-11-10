@@ -162,10 +162,10 @@ const Footer = () => {
           <p className="font-medium">Products</p>
 
           <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-300">
-            <a className="hover:opacity-75" href=""> Cake Section </a>
-            <a className="hover:opacity-75" href=""> Review </a>
-            <a className="hover:opacity-75" href=""> Blog </a>
-            <a className="hover:opacity-75" href=""> Swite Sessions </a>
+            <a className="hover:opacity-75" href=""> 1to1 Coaching </a>
+            <a className="hover:opacity-75" href=""> Lesson Plans </a>
+            <a className="hover:opacity-75" href=""> Meal Plans </a>
+            <a className="hover:opacity-75" href=""> Gym Sessions </a>
           </nav>
         </div>
       </div>
