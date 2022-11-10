@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, Navigate, useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLoaderData, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewBlog from './ReviewBlog';
 
@@ -10,9 +10,6 @@ const CakeDetails = () => {
     const cakaDetails=useLoaderData();
 
     const location=useLocation();
-    const navigate=useNavigate();
-
-    console.log(location)
 
 
     const {_id,name,img,price,rating,details,cakeService}=cakaDetails;
@@ -242,8 +239,7 @@ const CakeDetails = () => {
 
 
                         <div className='container flex flex-col w-full max-w-lg p-6 mx-auto'>
-                            <h3>Please  <Link to='/login' state={{from:location}} className="font-medium text-teal-300 dark:text-gray-200 hover:underline">Login</Link> to add a review</h3>
-                           
+                            <h3>Please  <Link to='/login' className="font-medium text-teal-300 dark:text-gray-200 hover:underline">Login</Link> to add a review</h3>
                         </div>
                      
 
