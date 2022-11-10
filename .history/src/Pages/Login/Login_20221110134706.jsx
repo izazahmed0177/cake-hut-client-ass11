@@ -23,10 +23,7 @@ const Login = () => {
             form.reset()
             navigate(from,{replace:true});
         })
-        .catch(err=>{
-            console.error(err)
-            
-        })
+        .catch(err=>console.error(err))
         .finally(()=>{
             setLoading(false)
         })
@@ -40,9 +37,6 @@ const Login = () => {
             console.log(user)
         })
         .catch(err=>console.error(err))
-        .finally(()=>{
-            setLoading(false)
-        })
     }
 
 
