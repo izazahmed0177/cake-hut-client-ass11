@@ -22,8 +22,8 @@ const CakeDetails = () => {
     const [reviews,setReviews]=useState([]);
 
     useEffect(()=>{
-        // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/allreviewscake/${_id}`)
+        // fetch('https://cake-hut-server-ass11.vercel.app/allreviews')
+        fetch(`https://cake-hut-server-ass11.vercel.app/allreviewscake/${_id}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
     // },[reviews]);
@@ -60,7 +60,7 @@ const CakeDetails = () => {
 
         }
 
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://cake-hut-server-ass11.vercel.app/reviews',{
             method:'POST',
             headers:{
                 'content-type':'application/json',

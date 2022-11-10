@@ -29,7 +29,7 @@ const EditReviewItem = () => {
             message
         }
 
-        fetch(`http://localhost:5000/userreview/${_id}`,{
+        fetch(`https://cake-hut-server-ass11.vercel.app/userreview/${_id}`,{
             method:'PATCH',
             headers:{
                 'content-type':'application/json'

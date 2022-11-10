@@ -6,7 +6,7 @@ const OurCakeHeader = () => {
   const [cakeServices,setCakeServices]=useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:5000/cakeservicehome')
+    fetch('https://cake-hut-server-ass11.vercel.app/cakeservicehome')
     .then(res=>res.json())
     .then(data=>setCakeServices(data))
   },[])

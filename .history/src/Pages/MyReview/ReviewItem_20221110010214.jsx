@@ -11,7 +11,7 @@ const ReviewItem = ({review}) => {
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure,delete this');
         if (proceed) {
-            fetch(`http://localhost:5000/userreview/${_id}`,{
+            fetch(`https://cake-hut-server-ass11.vercel.app/userreview/${_id}`,{
                 method:'DELETE',
             })
             .then(res=>res.json())

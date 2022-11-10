@@ -28,7 +28,7 @@ const AddCake = () => {
 
     }
 
-    fetch('http://localhost:5000/addcake',{
+    fetch('https://cake-hut-server-ass11.vercel.app/addcake',{
         method:'POST',
         headers:{
             'content-type':'application/json',

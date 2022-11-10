@@ -36,7 +36,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/ourcake',
                 element: <OurCake></OurCake>,
-                loader: () => fetch('http://localhost:5000/cakeservices')
+                loader: () => fetch('https://cake-hut-server-ass11.vercel.app/cakeservices')
 
 
             },

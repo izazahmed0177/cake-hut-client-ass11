@@ -29,7 +29,7 @@ const Login = () => {
             console.log(curentUser)
             form.reset()
             //get jwt token
-            fetch('http://localhost:5000/jwt',{
+            fetch('https://cake-hut-server-ass11.vercel.app/jwt',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'
@@ -67,7 +67,7 @@ const Login = () => {
             }
             console.log(curentUser)
           
-            fetch('http://localhost:5000/jwt',{
+            fetch('https://cake-hut-server-ass11.vercel.app/jwt',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'

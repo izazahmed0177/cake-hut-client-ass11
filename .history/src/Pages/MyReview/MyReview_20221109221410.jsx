@@ -9,8 +9,8 @@ const MyReview = () => {
 
     const [reviews,setReviews]=useState([]);
     useEffect(()=>{
-        // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/customer/${customerId}`)
+        // fetch('https://cake-hut-server-ass11.vercel.app/allreviews')
+        fetch(`https://cake-hut-server-ass11.vercel.app/customer/${customerId}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);

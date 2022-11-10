@@ -11,8 +11,8 @@ const MyReview = () => {
 
     const [reviews,setReviews]=useState([]);
     useEffect(()=>{
-        // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/customer/${customerId}`)
+        // fetch('https://cake-hut-server-ass11.vercel.app/allreviews')
+        fetch(`https://cake-hut-server-ass11.vercel.app/customer/${customerId}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);
@@ -25,7 +25,7 @@ const MyReview = () => {
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure,delete this');
         if (proceed) {
-            fetch(`http://localhost:5000/userreview/${_id}`,{
+            fetch(`https://cake-hut-server-ass11.vercel.app/userreview/${_id}`,{
                 method:'DELETE',
             })
             .then(res=>res.json())
