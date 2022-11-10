@@ -36,8 +36,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog></Blog>,
-                title: 'Cake Hut Blog'
+                element: <Blog></Blog>
 
             },
             {

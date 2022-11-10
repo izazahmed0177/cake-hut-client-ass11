@@ -5,6 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+    // apiKey: "AIzaSyCYbav-5LZ7FfSFVRIPgBsapWIFd3KVYNc",
+    // authDomain: "cake-hut-11b0b.firebaseapp.com",
+    // projectId: "cake-hut-11b0b",
+    // storageBucket: "cake-hut-11b0b.appspot.com",
+    // messagingSenderId: "484092231566",
+    // appId: "1:484092231566:web:e157e1edde04f2ad0eaedf"
 
     apiKey: process.env.REACT_APP_apiKey,
     authDomain: process.env.REACT_APP_authDomain,

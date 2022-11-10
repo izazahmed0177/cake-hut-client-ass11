@@ -6,20 +6,14 @@ import toast, { Toaster } from 'react-hot-toast';
 
 import { Router } from 'react-router-dom';
 import 'react-photo-view/dist/react-photo-view.css';
-import RouterTitle from 'react-router-title';
 
 function App(route) {
   // document.title = route.title || "Cake Hut";
   return (
-    <div>
-
-
-
+    <Router>
       <RouterProvider router={routes}></RouterProvider>
       <Toaster></Toaster>
-
-
-    </div>
+    </Router>
   );
 }
 

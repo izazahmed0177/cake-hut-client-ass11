@@ -11,15 +11,11 @@ import RouterTitle from 'react-router-title';
 function App(route) {
   // document.title = route.title || "Cake Hut";
   return (
-    <div>
-
-
-
+    <Router>
+      <RouterTitle pageTitle="My Company Name" routesConfig={routes} />
       <RouterProvider router={routes}></RouterProvider>
       <Toaster></Toaster>
-
-
-    </div>
+    </Router>
   );
 }
 

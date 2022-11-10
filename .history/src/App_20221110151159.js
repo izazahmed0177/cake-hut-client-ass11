@@ -3,22 +3,14 @@ import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './Routes/Routes/Routes';
 import toast, { Toaster } from 'react-hot-toast';
-
-import { Router } from 'react-router-dom';
 import 'react-photo-view/dist/react-photo-view.css';
-import RouterTitle from 'react-router-title';
 
 function App(route) {
   // document.title = route.title || "Cake Hut";
   return (
     <div>
-
-
-
       <RouterProvider router={routes}></RouterProvider>
       <Toaster></Toaster>
-
-
     </div>
   );
 }
