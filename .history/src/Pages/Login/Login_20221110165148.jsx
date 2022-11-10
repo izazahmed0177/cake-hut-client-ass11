@@ -50,7 +50,9 @@ const Login = () => {
             console.error(err)
             
         })
-       
+        .finally(()=>{
+            // setLoading(false)
+        })
     }
 //----------------
 

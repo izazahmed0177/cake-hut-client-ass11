@@ -5,7 +5,7 @@ import NoReview from './NoReview';
 import ReviewItem from './ReviewItem';
 
 const MyReview = () => {
-    const {user,logOut}=useContext(AuthContext);
+    const {user}=useContext(AuthContext);
     // const [allReview,setAllReview]=useState();
 
     const  customerId=user?.uid || 'unregistered'
@@ -16,22 +16,16 @@ const MyReview = () => {
 
     useEffect(()=>{
         // fetch('http://localhost:5000/allreviews')
-        fetch(`http://localhost:5000/customer/${customerId}?email=${user?.email}`,{
+        fetch(`http://localhost:5000/customer/${customerId}`,{
             headers:{
                 authorization:`Bearer ${localStorage.getItem('cake-Token')}`
             }
         })
-        .then(res=>{
-            if (res.status===401 || res.status===403) {
-                return logOut()
-             }
-            return res.json()
-        })
+        .then(res=>res.json())
         .then(data=>setReviews(data))
-    // },[reviews]);
-    },[user?.email,logOut]);
+    },[reviews]);
 
-    // console.log(reviews)
+    console.log(reviews)
 
 
 
@@ -41,9 +35,6 @@ const MyReview = () => {
         if (proceed) {
             fetch(`http://localhost:5000/userreview/${id}`,{
                 method:'DELETE',
-                headers:{
-                    authorization:`Bearer ${localStorage.getItem('cake-Token')}`
-                }
             })
             .then(res=>res.json())
             .then(data=>{

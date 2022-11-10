@@ -29,7 +29,7 @@ const MyReview = () => {
         })
         .then(data=>setReviews(data))
     // },[reviews]);
-    },[user?.email,logOut]);
+    },[]);
 
     // console.log(reviews)
 
@@ -41,9 +41,6 @@ const MyReview = () => {
         if (proceed) {
             fetch(`http://localhost:5000/userreview/${id}`,{
                 method:'DELETE',
-                headers:{
-                    authorization:`Bearer ${localStorage.getItem('cake-Token')}`
-                }
             })
             .then(res=>res.json())
             .then(data=>{

@@ -40,19 +40,27 @@ const Login = () => {
             .then(data=>{
                 console.log(data);
                 //local storage set
-                localStorage.setItem('cake-Token',data.token);
+                localStorage.setItem('genius-Token',data.token);
                  navigate(from,{replace:true})
             })
 
+
+
+
+
+
+        
             // navigate(from,{replace:true});
         })
         .catch(err=>{
             console.error(err)
             
         })
-       
+        .finally(()=>{
+            setLoading(false)
+        })
     }
-//----------------
+
 
     const handaleGoogleSignIn=()=>{
         googleSignIn()
@@ -65,14 +73,35 @@ const Login = () => {
                 email:user.email
             }
             console.log(curentUser)
-            navigate(from,{replace:true})
            
-                
+            //get jwt token
+            fetch('http://localhost:5000/jwt',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json'
+
+                },
+                body:JSON.stringify(curentUser)
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+                //local storage set
+                localStorage.setItem('genius-Token',data.token);
+                 navigate(from,{replace:true})
+            })
+            //-------------
+
+            
+
+
+
+
+
         })
         .catch(err=>console.error(err))
         .finally(()=>{
-
-            // setLoading(false)
+            setLoading(false)
         })
     }
 

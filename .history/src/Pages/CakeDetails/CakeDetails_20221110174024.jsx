@@ -1,78 +1,157 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import ReviewBlog from './ReviewBlog';
 
-const EditReviewItem = () => {
+const CakeDetails = () => {
 
-    const reviewEditData=useLoaderData();
-
-    const {_id,cakeName,customerEmail,customerRating,message}=reviewEditData;
+    const {user}=useContext(AuthContext)
+    const cakaDetails=useLoaderData();
 
     const location=useLocation();
     const navigate=useNavigate();
 
-    const from=location.state?.from?.pathname || '/myreview';
+    console.log(location)
 
 
+    const {_id,name,img,price,rating,details,cakeService}=cakaDetails;
+
+    ////////////
+
+    const [reviews,setReviews]=useState([]);
+
+    useEffect(()=>{
+        // fetch('http://localhost:5000/allreviews')
+        fetch(`http://localhost:5000/allreviewscake/${_id}`)
+        .then(res=>res.json())
+        .then(data=>setReviews(data))
+    // },[reviews]);
+    },[]);
 
 
+    // /////////////
 
-
-    const handleUpdateCakeReview=event=>{
+    const handlePlaceCakeReview=event=>{
         event.preventDefault();
         const form=event.target;
+        const customerEmail=user?.email || 'unregistered'
         const customerRating=form.rating.value;
         const message=form.message.value;
+        const  customerName=user?.displayName || 'unregistered'
+        const  customerId=user?.uid || 'unregistered'
+        const  customerImg=user?.photoURL || 'unregistered'
 
-        const updateReview={
+        const review={
+            cakeService:_id,
+            cakeName:name,
+            cakePrice:price,
+            cakeRating:rating,
+            cakeImg:img,
+            customerEmail,
             customerRating,
-            message
+            message,
+            customerName,
+            customerId,
+            customerImg
+
         }
 
-        fetch(`http://localhost:5000/userreview/${_id}`,{
-            method:'PATCH',
+        fetch('http://localhost:5000/reviews',{
+            method:'POST',
             headers:{
-                'content-type':'application/json',
-                authorization:`Bearer ${localStorage.getItem('cake-Token')}`
+                'content-type':'application/json'
             },
-            body:JSON.stringify(updateReview)
-
+            body:JSON.stringify(review)
         })
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
-            if (data.modifiedCount > 0) {
-                alert('Review Update successfully')
+            if (data.acknowledged) {
+                alert('Review placed successfully')
                 toast.success('Review Placed successfully')
-                navigate(from,{replace:true})
                 form.reset();
             }
         })
 
         .catch(err=>console.error(err));
 
+
+
+
     }
 
 
     useEffect(()=>{
-        document.title='Cake Hut Edit Review';
+        document.title='Cake Details';
     })
+
+
+
+
     return (
         <div>
+            {/* <h1>det</h1>
+            <h1>{name}</h1> */}
+
             <div>
+
+            <section className="text-gray-600 body-font">
+  <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <img className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src={img}/>
+    <div className="text-center lg:w-2/3 w-full">
+      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{name}</h1>
+      <p className="mb-8 leading-relaxed">{details}</p>
+      <div className="flex justify-center">
+        <span className="inline-flex   border-0 py-2 px-6  rounded text-lg">Price: ${price}</span>
+        <button className="ml-4 inline-flex   border-0 py-2 px-6  rounded text-lg">Rating: {rating}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+            </div>
+
+            <div className='text-center title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900'>
+                <h1>All Review</h1>
+            </div>
+
+
+
+            <div className='m-3'>
+                {/* ////////////////// */}
+
+
+                                {
+                                    reviews.map(review=><ReviewBlog key={review._id} review={review}></ReviewBlog>)
+                                }
+                                        
+
+
+
+{/* /////////////// */}
+
+            </div>
+
+
+            {/*  */}
+
+
+            {
+                    user?.uid ?
+                    <>
+
+
+
+                       <div>
                         <section className="bg-gray-100">
                         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-                            <div className='text-center m-3 font-bold text-6xl'>Edit Review</div>
                             <div className="grid  gap-x-16 gap-y-8 lg:">
 
                             
 
                             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-                                <div>
-                                    <h1 className='mb-2'>Cake Name : {cakeName} </h1>
-                                </div>
-                                <form onSubmit={handleUpdateCakeReview} action=""className="space-y-4">
-
+                                <form onSubmit={handlePlaceCakeReview} action=""className="space-y-4">
                                 
 
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -81,7 +160,7 @@ const EditReviewItem = () => {
                                     <input
                                         class="w-full rounded-lg border-gray-200 p-3 text-sm"
                                         placeholder="Email address"
-                                        defaultValue={customerEmail}
+                                        defaultValue={user?.email}
                                         readOnly
                                         type="email"
                                         name='email'
@@ -96,11 +175,10 @@ const EditReviewItem = () => {
                                     <input
                                         class="w-full rounded-lg border-gray-200 p-3 text-sm"
                                         placeholder="Your Rating"
-                                        defaultValue={customerRating}
                                         
                                         type="text"
                                         name='rating'
-                                        
+                                        required
                                     />
                                     </div>
 
@@ -114,10 +192,9 @@ const EditReviewItem = () => {
                                     <textarea
                                     className="w-full rounded-lg border-gray-200 p-3 text-sm"
                                     placeholder="Message"
-                                    defaultValue={message}
                                     rows="8"
                                     name='message'
-                                    
+                                    required
                                     ></textarea>
                                 </div>
 
@@ -126,7 +203,7 @@ const EditReviewItem = () => {
                                     type="submit"
                                     class="inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto"
                                     >
-                                    <span class="font-medium"> Save  Review </span>
+                                    <span class="font-medium"> Send  Review </span>
 
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -151,9 +228,50 @@ const EditReviewItem = () => {
                         </section>
 
                       </div>
+                    
+                    </>
+                    :
+                    <>
+
+                        <div className='container flex flex-col w-full max-w-lg p-6 mx-auto'>
+                            <h3>Please  <Link to='/login' state={{from:location}} className="font-medium text-teal-300 dark:text-gray-200 hover:underline">Login</Link> to add a review</h3>
+                           
+                        </div>
+                     
+
+
+
+
+
+                    </>
+                }
+
+
+
+
+            {/*  */}
+
+
+
+
+
+
+
+
+
             
+
+
+{/*  */}
+
+            
+
+
+
+
+
         </div>
     );
 };
 
-export default EditReviewItem;
+export default CakeDetails;
