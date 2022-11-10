@@ -114,8 +114,8 @@ const Blog = () => {
 
       <div className="py-8 flex flex-wrap md:flex-nowrap">
         <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span className="font-semibold title-font text-gray-700">NodeJS</span>
-          <span className="text-sm text-gray-500">12 Oct 2022</span>
+          <span className="font-semibold title-font text-gray-700">CATEGORY</span>
+          <span className="text-sm text-gray-500">12 Jun 2019</span>
         </div>
         <div className="md:flex-grow">
           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">4. How does NodeJS handle multiple requests at the same time ?</h2>

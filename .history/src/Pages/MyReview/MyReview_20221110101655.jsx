@@ -27,7 +27,7 @@ const MyReview = () => {
 
 
     const handleDelete=id=>{
-        const proceed=window.confirm('Are you sure,Delete this Review');
+        const proceed=window.confirm('Are you sure,delete this');
         if (proceed) {
             fetch(`http://localhost:5000/userreview/${id}`,{
                 method:'DELETE',

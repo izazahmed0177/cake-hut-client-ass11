@@ -1,5 +1,4 @@
 import React from 'react';
-import toast from 'react-hot-toast';
 
 const AddCake = () => {
 
@@ -40,7 +39,6 @@ const AddCake = () => {
         console.log(data)
         if (data.acknowledged) {
             alert('Cake Add successfully')
-            toast.success('Cake Add Successfully')
             form.reset();
         }
     })

@@ -1,5 +1,4 @@
 import React from 'react';
-import toast from 'react-hot-toast';
 
 const AddCake = () => {
 
@@ -28,7 +27,7 @@ const AddCake = () => {
 
     }
 
-    fetch('http://localhost:5000/addcake',{
+    fetch('',{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -40,7 +39,6 @@ const AddCake = () => {
         console.log(data)
         if (data.acknowledged) {
             alert('Cake Add successfully')
-            toast.success('Cake Add Successfully')
             form.reset();
         }
     })
@@ -62,11 +60,8 @@ const AddCake = () => {
     return (
         <div>
             {/* <h1>add cake</h1> */}
-            <div className='text-center text-4xl'>
+            <div>
               <h1>Admin Panel</h1>
-            </div>
-            <div className='text-center text-2xl'>
-              <h1>Only admin can add data</h1>
             </div>
 
       <div className="mt-10 sm:mt-0 m-6">

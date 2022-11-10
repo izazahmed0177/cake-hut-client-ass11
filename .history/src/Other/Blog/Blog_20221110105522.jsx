@@ -78,8 +78,8 @@ const Blog = () => {
 
       <div className="py-8 flex flex-wrap md:flex-nowrap">
         <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span className="font-semibold title-font text-gray-700">Javascript and NodeJS</span>
-          <span className="text-sm text-gray-500">12 Sep 2022</span>
+          <span className="font-semibold title-font text-gray-700">CATEGORY</span>
+          <span className="text-sm text-gray-500">12 Jun 2019</span>
         </div>
         <div className="md:flex-grow">
           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">3. What is the difference between javascript and NodeJS ?</h2>
@@ -91,19 +91,14 @@ const Blog = () => {
             <p>Node.js was first introduced in 2009 developed by Ryan Dahl and is a runtime environment for JavaScript built on Google’s v8 engine whose main purpose is to run JavaScript on the server and hence JavaScript can be executed outside of the browser. The nicest part about Node.js is that it never blocks I/O, is event-driven, and can be used to create highly scalable apps. In Node.js everything is a module and using these modules developers make use of Node.js in creating web APIs, Rest API servers, command-line applications, and real-time chat applications.</p>
             <h1>Difference between JavaScript and Node.js</h1>
             <p>JavaScript is a proper high-level programming language used to create web scripts whereas Node.js is a run time environment built on google’s v8 engine.
-                <br />
 
              JavaScript is executed in the browser whereas using Node.js gives us the ability to execute JavaScript outside the browser.
-             <br />
 
               JavaScript can manipulate DOM or add HTML within whereas Node.js doesn’t have the capability to add HTML.
-              <br />
 
                 JavaScript is mainly used to create front end web applications or develop client-side whereas Node.js is used on the back end development that is server-side development
-                <br />
 
              JavaScript follows the standard of JavaScript when writing programs whereas Node.js is written in C++ while using the v8 engine, it runs JavaScript outside the browser.
-             <br />
 
               JavaScript requires any running environment as it can execute on any engine such as Firefox’s spider monkey, v8 engine of google chrome, JavaScript core of Safari whereas Node.js runs only on the v8 engine of google chrome.</p>
         
@@ -114,26 +109,12 @@ const Blog = () => {
 
       <div className="py-8 flex flex-wrap md:flex-nowrap">
         <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span className="font-semibold title-font text-gray-700">NodeJS</span>
-          <span className="text-sm text-gray-500">12 Oct 2022</span>
+          <span className="font-semibold title-font text-gray-700">CATEGORY</span>
+          <span className="text-sm text-gray-500">12 Jun 2019</span>
         </div>
         <div className="md:flex-grow">
           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">4. How does NodeJS handle multiple requests at the same time ?</h2>
-          <p className="leading-relaxed">Given a NodeJS application, since Node is single threaded, say if processing involves a Promise.all that takes 8 seconds, does this mean that the client request that comes after this request would need to wait for eight seconds?
-No. NodeJS event loop is single threaded. The entire server architecture for NodeJS is not single threaded.
-<br />
-Before getting into the Node server architecture, to take a look at typical multithreaded request response model, the web server would have multiple threads and when concurrent requests get to the webserver, the webserver picks threadOne from the threadPool and threadOne processes requestOne and responds to clientOne and when the second request comes in, the web server picks up the second thread from the threadPool and picks up requestTwo and processes it and responds to clientTwo. threadOne is responsible for all kinds of operations that requestOne demanded including doing any blocking IO operations.
-<br />
-The fact that the thread needs to wait for blocking IO operations is what makes it inefficient. With this kind of a model, the webserver is only able to serve as much requests as there are threads in the thread pool.
-<br />
-NodeJS Web Server maintains a limited Thread Pool to provide services to client requests. Multiple clients make multiple requests to the NodeJS server. NodeJS receives these requests and places them into the EventQueue .
-NodeJS server has an internal component referred to as the EventLoop which is an infinite loop that receives requests and processes them. This EventLoop is single threaded. In other words, EventLoop is the listener for the EventQueue.
-So, we have an event queue where the requests are being placed and we have an event loop listening to these requests in the event queue. What happens next?
-The listener(the event loop) processes the request and if it is able to process the request without needing any blocking IO operations, then the event loop would itself process the request and sends the response back to the client by itself.
-If the current request uses blocking IO operations, the event loop sees whether there are threads available in the thread pool, picks up one thread from the thread pool and assigns the particular request to the picked thread. That thread does the blocking IO operations and sends the response back to the event loop and once the response gets to the event loop, the event loop sends the response back to the client.
-<br />
-How is NodeJS better than traditional multithreaded request response model?
-With traditional multithreaded request/response model, every client gets a different thread where as with NodeJS, the simpler request are all handled directly by the EventLoop. This is an optimization of thread pool resources and there is no overhead of creating the threads for every client request.</p>
+          <p className="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
         
         </div>
       </div>
